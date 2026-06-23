@@ -6,8 +6,8 @@ const cors = require('cors');
 const dotenv =  require('dotenv');
 // Importing mongoose to connect to MongoDB
 const mongoose = require('mongoose');
-// Importing workout routes
-const workoutRoutes = require('./routes/workout')
+// Importing transaction routes
+const transactionRoutes = require('./routes/transaction')
 const userRoutes = require('./routes/user')
 // Configuring dotenv
 dotenv.config();
@@ -47,10 +47,13 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
   res.json({msg: 'Hello from Express server!'});
 });
-// Workout routes
-app.use('/api/workouts', workoutRoutes);
+// Transaction routes
+app.use('/api/transactions', transactionRoutes);
 // User routes
 app.use('/api/user', userRoutes);
+// Analytics routes
+const analyticsRoutes = require('./routes/analytics');
+app.use('/api', analyticsRoutes);
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
