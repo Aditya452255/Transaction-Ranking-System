@@ -3,6 +3,7 @@
 **Live Demo URL**: [https://transaction-ranking-system-two.vercel.app/](https://transaction-ranking-system-two.vercel.app/)
 
 A secure, full-stack transaction tracking and ranking application built with the MERN stack (MongoDB, Express, React, Node.js). This system allows users to securely authenticate, manage their transactions, view analytics summaries, and compete on a global multi-factor leaderboard.
+
 **Test Account 1**
 * **Email:** `testuser1@example.com`
 * **Password:** `Password@123`
